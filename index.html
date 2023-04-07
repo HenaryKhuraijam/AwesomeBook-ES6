@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Book with ES6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <h1><a href="#book-list">Awesome Books</a> </h1>
+    <nav>
+      <ul class="nav-bar">
+        <li><a id="list" href="#book-list">List</a></li>
+        <li><a id="add-new" href="#add-book">Add New</a></li>
+        <li><a id="contact" href="#contact-form">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="all">
+    <section class="book-list" id="book-list">
+      <h2>All awesome books</h2>
+      <div id="booklist-content" class="booklist-content">
+
+      </div>
+    </section>
+
+    <section class="add-book" id="add-book">
+      <h2>Add a new Book</h2>
+      <form class="add-input" id="add-form" action="submit">
+        <input id="title" type="text" placeholder="Title">
+        <input id="author" type="text" placeholder="Author">
+        <button id="add-btn" type="submit" class="btn">Add</button>
+      </form>
+    </section>
+
+    <section class="contact" id="contact-form">
+      <div class="contact-info">
+        <h2>Contact information</h2>
+        <div class="description">
+          <p>Do have any question you just want to say "hello"?</p>
+          <p>You can reach out us !</p>
+        </div>
+        <ul>
+          <li> <span class="contact-details">Email:</span> henary@gmail.com</li>
+          <li> <span class="contact-details">Contact no. :</span> 995665665</li>
+          <li> <span class="contact-details">Address :</span> Imphal</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Copyright @copy 2023 Awesome Books
+  </footer>
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>
