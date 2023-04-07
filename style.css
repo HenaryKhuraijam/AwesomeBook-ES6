@@ -32,6 +32,11 @@ section:is(.book-list, :target) {
   gap: 40px;
 }
 
+#time-content {
+  padding: 1em;
+  text-align: right;
+}
+
 article {
   display: flex;
   padding: 0.5em;

@@ -1,9 +1,9 @@
 import { awesomeBook, saveToLocalStorage } from './DBMsystem.js';
 
 /* eslint-disable */
-const removeBtnOnClick = (id) => {
-  alert('remove')
-  awesomeBook.removeBook(id);
+const removeBtnOnClick = (e) => {
+  e.preventDefault();
+  awesomeBook.removeBook(e.target.id);
   displayBooklist(awesomeBook.books);
   saveToLocalStorage();
 };
@@ -13,9 +13,13 @@ const displayBooklist = (bookList) => {
   document.getElementById('booklist-content').innerHTML = bookList.map((book) => `
   <article id="book-${book.id}">
     <p><span class="title">"${book.title}"</span> by <span class="author">${book.author}</span></p>
-    <button class="btn" onClick="removeBtnOnClick('${book.id}')" type="button" id="${book.id}">Remove</button>
+    <button class="btn btn-remove" type="button" id="${book.id}">Remove</button>
   </article>
   `).join('');
+  const btnRemove = document.querySelectorAll('.btn-remove');
+  btnRemove.forEach((item) => {
+    item.addEventListener('click', removeBtnOnClick);
+  });
 };
 
 displayBooklist(awesomeBook.books);
