@@ -1,13 +1,12 @@
 import { awesomeBook, saveToLocalStorage } from './DBMsystem.js';
 
-/* eslint-disable */
 const removeBtnOnClick = (e) => {
   e.preventDefault();
   awesomeBook.removeBook(e.target.id);
-  displayBooklist(awesomeBook.books);
+  e.target.parentElement.parentElement.remove();
+  // document.getElementById(`book-${e.target.id}`).remove();
   saveToLocalStorage();
 };
-/* eslint-enable */
 
 const displayBooklist = (bookList) => {
   document.getElementById('booklist-content').innerHTML = bookList.map((book) => `
