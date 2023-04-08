@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  display: none;
+}
+
+.add-input {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+h2,
+h1 {
+  font-size: 1.5rem;
+}
+
+section h2 {
+  text-align: center;
+}
+
+section:is(.book-list, :target) {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 15%;
+  gap: 40px;
+}
+
+#time-content {
+  padding: 1em;
+  text-align: right;
+}
+
+article {
+  display: flex;
+  padding: 0.5em;
+  justify-content: space-between;
+}
+
+article:nth-child(odd) {
+  background-color: hsl(190, 46%, 90%);
+}
+
+.booklist-content {
+  border: 2px solid hsl(190, 46%, 5%);
+}
+
+.btn {
+  padding: 0.5em;
+  box-shadow: 2px 2px 5px hsl(0 0% 0% / 0.9);
+}
+
+main:has(:target:not(.book-list)) .book-list {
+  display: none;
+}
+
+footer {
+  margin: 0 15%;
+  padding: 0.5em;
+  position: fixed;
+  bottom: 0.4em;
+  width: 70%;
+  border: 2px solid hsl(190, 46%, 5%);
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: hsl(190, 46%, 90%);
+  display: flex;
+  padding: 0.5em 15%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: hsl(190, 46%, 10%);
+}
+
+.nav-bar {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-bar a:hover {
+  color: hsl(190, 46%, 50%);
+  text-decoration: underline;
+}
+
+/* Add New Books */
+
+.add-book input {
+  padding: 1rem;
+}
+
+#add-btn {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  align-self: flex-end;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  border: 2px solid hsl(190, 46%, 10%);
+}
+
+.description {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.contact-details {
+  font-weight: bold;
+}
+
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 50%;
+  margin: auto;
+}
